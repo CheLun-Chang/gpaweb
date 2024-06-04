@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>成績計算網站</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+  <body>
+    <!-- 開場動畫 -->
+    <section class="animation-wrapper">
+      <section class="animation">
+        <div class="hero">
+          <img src="./math.jpg" alt="math image" />
+        </div>
+      </section>
+      <div class="slider"></div>
+    </section>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="/how2use.html">How to use</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="mainPart">
+        <h1>GPA Calculator</h1>
+
+        <div class="button">
+          <button class="btn sort-descending">降序排序</button>
+          <button class="btn sort-ascending">升序排序</button>
+        </div>
+
+        <div class="allInputs">
+          <form>
+            <div class="grader">
+              <input
+                class="class-type"
+                type="text"
+                placeholder="class category"
+                list="opt"
+              /><!--  
+               --><input
+                class="class-number"
+                type="text"
+                placeholder="class number"
+              /><!--                 
+              --><input
+                class="class-credits"
+                type="number"
+                min="0"
+                max="6"
+                placeholder="credits"
+              /><!--  
+              --><select class="select" name="select">
+                <option value=""></option>
+                <option value="A">A</option>
+                <option value="A-">A-</option>
+                <option value="B+">B+</option>
+                <option value="B">B</option>
+                <option value="B-">B-</option>
+                <option value="C+">C+</option>
+                <option value="C">C</option>
+                <option value="C-">C-</option>
+                <option value="D+">D+</option>
+                <option value="D">D</option>
+                <option value="D-">D-</option>
+                <option value="F">F</option></select
+              ><!--
+                --><button class="trash_button">
+                <i class="fas fa-trash"></i>
+              </button>
+            </div>
+          </form>
+          <form>
+            <div class="grader">
+              <input
+                class="class-type"
+                type="text"
+                placeholder="class category"
+                list="opt"
+              /><!--
+            --><input
+                class="class-number"
+                type="text"
+                placeholder="class number"
+              /><!--
+            --><input
+                class="class-credits"
+                type="number"
+                min="0"
+                max="6"
+                placeholder="credits"
+              /><!--
+            --><select class="select" name="select">
+                <option value=""></option>
+                <option value="A">A</option>
+                <option value="A-">A-</option>
+                <option value="B+">B+</option>
+                <option value="B">B</option>
+                <option value="B-">B-</option>
+                <option value="C+">C+</option>
+                <option value="C">C</option>
+                <option value="C-">C-</option>
+                <option value="D+">D+</option>
+                <option value="D">D</option>
+                <option value="D-">D-</option>
+                <option value="F">F</option></select
+              ><!--
+            --><button class="trash_button">
+                <i class="fas fa-trash"></i>
+              </button>
+            </div>
+          </form>
+          <form>
+            <div class="grader">
+              <input
+                class="class-type"
+                type="text"
+                placeholder="class category"
+                list="opt"
+              /><!--
+            --><input
+                class="class-number"
+                type="text"
+                placeholder="class number"
+              /><!--
+            --><input
+                class="class-credits"
+                type="number"
+                min="0"
+                max="6"
+                placeholder="credits"
+              /><!--
+            --><select class="select" name="select">
+                <option value=""></option>
+                <option value="A">A</option>
+                <option value="A-">A-</option>
+                <option value="B+">B+</option>
+                <option value="B">B</option>
+                <option value="B-">B-</option>
+                <option value="C+">C+</option>
+                <option value="C">C</option>
+                <option value="C-">C-</option>
+                <option value="D+">D+</option>
+                <option value="D">D</option>
+                <option value="D-">D-</option>
+                <option value="F">F</option></select
+              ><!--
+            --><button class="trash_button">
+                <i class="fas fa-trash"></i>
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <button type="button" class="plus-btn">
+          <i class="fas fa-plus-square"></i>
+        </button>
+
+        <div class="result">
+          <p id="gpa-text">
+            Your semester <br />
+            GPA is
+          </p>
+          <h2 id="result-gpa">0.00</h2>
+        </div>
+      </section>
+    </main>
+
+    <datalist id="opt">
+      <option value="Math">Math</option>
+      <option value="Chinese">Chinese</option>
+      <option value="English">English</option>
+    </datalist>
+
+    <!-- <audio
+      id="background-music"
+      src="./Hacking to the gate.mp3"
+      autoplay
+      loop
+    ></audio> -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineMax.min.js"
+      integrity="sha512-0xrMWUXzEAc+VY7k48pWd5YT6ig03p4KARKxs4Bqxb9atrcn2fV41fWs+YXTKb8lD2sbPAmZMjKENiyzM/Gagw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"
+      integrity="sha512-DkPsH9LzNzZaZjCszwKrooKwgjArJDiEjA5tTgr3YX4E6TYv93ICS8T41yFHJnnSmGpnf0Mvb5NhScYbwvhn2w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="./app.js"></script>
+  </body>
+</html>
